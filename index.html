@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolly Goyal | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a, #1e2937); }
+
+    /* PERFECT CENTERED UNDERLINE */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55%;
+      height: 4px;
+      background: #22d3ee;
+      border-radius: 2px;
+      animation: drawLine 1.2s ease forwards;
+    }
+
+    @keyframes drawLine {
+      from { width: 0; }
+      to { width: 55%; }
+    }
+
+    /* Fade-in animation for sections */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.9s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card hover effect */
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-12px) scale(1.04);
+      box-shadow: 0 25px 50px -12px rgb(34 211 238);
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-tight text-cyan-400">Portfolio</h1>
+      <div class="hidden md:flex gap-8 text-sm">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#certificates" class="hover:text-cyan-400 transition">Certificates</a>
+        <a href="#training" class="hover:text-cyan-400 transition">Training</a>
+        <a href="#education" class="hover:text-cyan-400 transition">Education</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </div>
+      <a href="https://github.com/DOLLY-GIThub" target="_blank" 
+         class="text-sm px-5 py-2 border border-cyan-400 rounded hover:bg-cyan-400 hover:text-zinc-950 transition">
+        GitHub
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="fade-in" style="animation-delay: 0.2s">
+        <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-4">
+          Hi, I'm <span class="text-cyan-400">Dolly Goyal</span>
+        </h2>
+        <p class="text-2xl text-zinc-400 mb-6">Aspiring Cloud Engineer &amp; Software Developer</p>
+        <p class="text-zinc-500 mb-10 max-w-md">Passionate about cloud computing, containerization, full-stack development, and building real-world safety &amp; automation projects.</p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-8 py-4 bg-cyan-400 text-zinc-950 font-semibold rounded-lg hover:bg-cyan-300 transition flex items-center gap-2">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+          
+          <!-- ✅ YOUR NEW CV LINK ADDED HERE -->
+          <a href="https://drive.google.com/file/d/1AYg-HW1sVN5ksMSgdbQEwkveT8Jrv1HC/view" 
+             target="_blank"
+             class="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-zinc-950 transition flex items-center gap-2">
+            <i class="fas fa-eye"></i> View CV
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center fade-in" style="animation-delay: 0.4s">
+        <div class="w-80 h-80 rounded-full overflow-hidden border-8 border-cyan-400 shadow-2xl">
+          <img src="profile.jpg" alt="Dolly Goyal" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-24 bg-zinc-900 fade-in" style="animation-delay: 0.3s">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">About Me</h2>
+      <div class="text-lg text-zinc-300 leading-relaxed space-y-6">
+        <p>A passionate B.Tech Computer Science student with hands-on experience in cloud technologies, containerization, and full-stack development.</p>
+        <p>Quick learner with strong problem-solving skills and 250+ coding problems solved across LeetCode, GFG &amp; HackerRank.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills" class="py-24 bg-zinc-950 fade-in" style="animation-delay: 0.4s">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Technical Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fab fa-python text-5xl text-yellow-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Python</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fab fa-java text-5xl text-red-500 mb-4"></i>
+          <h3 class="font-semibold text-xl">Java</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-c text-5xl text-blue-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">C++</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-code text-5xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">HTML &amp; CSS</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-cloud text-5xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">AWS Cloud Services</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-docker text-5xl text-blue-500 mb-4"></i>
+          <h3 class="font-semibold text-xl">Docker</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-laptop-code text-5xl text-emerald-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Podman &amp; RedHat</h3>
+        </div>
+        <div class="card-hover bg-zinc-900 border border-zinc-700 rounded-2xl p-8 text-center">
+          <i class="fas fa-cogs text-5xl text-amber-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Flask &amp; TensorFlow</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Skills -->
+  <section class="py-24 bg-zinc-900 fade-in" style="animation-delay: 0.5s">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Soft Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card-hover bg-zinc-800 border border-zinc-700 rounded-3xl p-8 text-center">
+          <i class="fas fa-lightbulb text-5xl text-yellow-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Strategic Innovation</h3>
+        </div>
+        <div class="card-hover bg-zinc-800 border border-zinc-700 rounded-3xl p-8 text-center">
+          <i class="fas fa-sync-alt text-5xl text-emerald-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Adaptability</h3>
+        </div>
+        <div class="card-hover bg-zinc-800 border border-zinc-700 rounded-3xl p-8 text-center">
+          <i class="fas fa-users text-5xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold text-xl">Emotional Intelligence &amp; Professional Etiquette</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (3 Projects Now) -->
+  <section id="projects" class="py-24 bg-zinc-950 fade-in" style="animation-delay: 0.6s">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <div class="card-hover bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+          <img src="https://picsum.photos/id/1015/800/500" alt="Community Event Planner" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold mb-3">Community Event Planner Chatbot</h3>
+            <p class="text-zinc-400 mb-6">Designed and built an interactive community event planning chatbot using HTML &amp; CSS for intuitive user experience. Integrated Python backend for real-time responses and automation.</p>
+            <p class="text-sm text-cyan-400 mb-6"><strong>Tech Stack:</strong> HTML, CSS, Python, Flask, JavaScript</p>
+            <a href="https://github.com/DOLLY-GIThub/community-event-planers" target="_blank" class="text-cyan-400 hover:underline">View Project →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card-hover bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+          <img src="https://picsum.photos/id/160/800/500" alt="LPG Stove Detection" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold mb-3">LPG Stove Control Based on Object Detection</h3>
+            <p class="text-zinc-400 mb-6">Developed a safety-focused LPG stove control system using image sensors for real-time hazard detection and automatic shut-off. Enabled remote monitoring via mobile/web app.</p>
+            <p class="text-sm text-cyan-400 mb-6"><strong>Tech Stack:</strong> Flask, USB Camera, TensorFlow</p>
+            <a href="https://github.com/DOLLY-GIThub/LPG-Stove-Control-Based-on-Object-Detection/blob/main/pentantpdf%20(1)%20(1)%20(2).pdf" target="_blank" class="text-cyan-400 hover:underline">View Project →</a>
+          </div>
+        </div>
+
+        <!-- New Project 3 - RedHat / Podman -->
+        <div class="card-hover bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+          <img src="https://picsum.photos/id/180/800/500" alt="Podman on Red Hat" class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110">
+          <div class="p-8">
+            <h3 class="text-2xl font-semibold mb-3">Podman Container Management on Red Hat</h3>
+            <p class="text-zinc-400 mb-6">Implemented rootless containerization using Podman on Red Hat Linux for secure and lightweight application deployment.</p>
+            <p class="text-sm text-cyan-400 mb-6"><strong>Tech Stack:</strong> Podman, Red Hat Linux, Containerization</p>
+            <a href="" target="_blank" class="text-cyan-400 hover:underline">View Project →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="py-24 bg-zinc-900 fade-in" style="animation-delay: 0.7s">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Certificates</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card-hover bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="relative">
+            <img src="https://drive.google.com/uc?id=1qkgDZTXlK86bUrNnrtJ2wWIr8G59F3fh" alt="Linux Certificate" class="w-full h-52 object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl text-white">Linux Administration &amp; Fundamentals</h3>
+            <p class="text-sm text-zinc-400 mb-4">Lovely Professional University • Jun 2025</p>
+            <a href="https://drive.google.com/file/d/1AHHj9gPpHK5St-Cx_VxifvsMGAaqjPyY/view" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">
+               View Certificate <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-hover bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="relative">
+            <img src="https://picsum.photos/id/201/600/300" alt="Privacy Certificate" class="w-full h-52 object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl text-white">Privacy and Security in Online Social Media</h3>
+            <p class="text-sm text-zinc-400 mb-4">NPTEL • Apr 2025</p>
+            <a href="https://drive.google.com/file/d/1KnXRqIem5e553hsqOy5o_hMd94iKpTi0/view" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">
+               View Certificate <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-hover bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="relative">
+            <img src="https://picsum.photos/id/237/600/300" alt="Networking Certificate" class="w-full h-52 object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl text-white">Python Basic</h3>
+            <p class="text-sm text-zinc-400 mb-4">Google • Nov 2024</p>
+            <a href="https://drive.google.com/file/d/1QIIF1GYW35oMVTwBfv3dNMAqdW7KJTis/view?usp=drivesdk" 
+               target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">
+               View Certificate <i class="fas fa-arrow-right text-sm"></i>
+            
+            </a>
+          </div>
+        </div>
+
+        <div class="card-hover bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="relative">
+            <img src="https://picsum.photos/id/180/600/300" alt="Hardware Certificate" class="w-full h-52 object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl text-white">Computational Theory: Language Principle & Finite Automata Theory</h3>
+            <p class="text-sm text-zinc-400 mb-4">Infosys • Aug 2025</p>
+            <a href="https://drive.google.com/file/d/1alGNkdZXihns167QX8KAbi9K7U4SQtOF/view?usp=drivesdk" 
+               target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">
+               View Certificate <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+  <!-- Card 5: New Certificate -->
+        <div class="card-hover bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-700">
+          <div class="relative">
+            <img src="https://picsum.photos/id/201/600/300" alt="Certificate 5" class="w-full h-52 object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl text-white">Amazon Web Services</h3>
+            <p class="text-sm text-zinc-400 mb-4">Issued: 2025</p>
+            <a href="https://drive.google.com/file/d/18TAfSIifK15TW6atL4V6WmupA1vNbn37/view?usp=drivesdk" 
+               target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">
+               View Certificate <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section id="training" class="py-24 bg-zinc-950 fade-in" style="animation-delay: 0.8s">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Training</h2>
+      <div class="border-l-4 border-cyan-400 pl-8">
+        <h3 class="text-2xl font-semibold">Linux Fundamentals - Application Deployment Using Containers</h3>
+        <p class="text-cyan-400 mb-6">Lovely Professional University • Jun 2024 – July 2025</p>
+        <ul class="text-zinc-400 list-disc pl-5 space-y-3 text-lg">
+          <li>Deployed containerized NGINX applications using Podman for lightweight, secure hosting.</li>
+          <li>Configured optimized container environments and automated deployment workflows.</li>
+          <li>Achieved improved uptime, faster deployments, and reduced resource usage.</li>
+        </ul>
+        <p class="text-sm text-cyan-400 mt-8"><strong>Tech Stack:</strong> Podman, NGINX, Linux, Containerization</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-24 bg-zinc-900 fade-in" style="animation-delay: 0.9s">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12">Education</h2>
+      <div class="space-y-8">
+        <div class="bg-zinc-800 rounded-3xl p-8 border border-zinc-700">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold">Bachelor of Technology - Computer Science and Engineering</h3>
+              <p class="text-cyan-400">Lovely Professional University, Phagwara, Punjab</p>
+            </div>
+            <div class="text-right text-sm text-zinc-400">
+              CGPA: 6.2<br>
+              Aug 2023 - Present
+            </div>
+          </div>
+        </div>
+        <div class="bg-zinc-800 rounded-3xl p-8 border border-zinc-700">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold">Intermediate</h3>
+              <p class="text-cyan-400">TSS International School, Morena, MP</p>
+            </div>
+            <div class="text-right text-sm text-zinc-400">
+              Percentage: 62%<br>
+              Apr 2022 - Mar 2023
+            </div>
+          </div>
+        </div>
+        <div class="bg-zinc-800 rounded-3xl p-8 border border-zinc-700">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold">Matriculation</h3>
+              <p class="text-cyan-400">TSS International School, Morena, MP</p>
+            </div>
+            <div class="text-right text-sm text-zinc-400">
+              Percentage: 83%<br>
+              Apr 2020 - Mar 2021
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-zinc-950 text-center fade-in" style="animation-delay: 1s">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="section-title text-4xl font-bold text-cyan-400 mb-12"> Contact Me</h2>
+      <p class="text-zinc-400 mb-10">Open to cloud engineering, software development, and internship opportunities.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:dollygoyal500@gmail.com" class="px-10 py-4 bg-cyan-400 text-zinc-950 font-semibold rounded-2xl hover:bg-cyan-300 transition flex items-center gap-3">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/dolly-goyal-" target="_blank" class="px-10 py-4 border border-zinc-400 font-semibold rounded-2xl hover:bg-zinc-800 transition flex items-center gap-3">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/DOLLY-GIThub" target="_blank" class="px-10 py-4 border border-zinc-400 font-semibold rounded-2xl hover:bg-zinc-800 transition flex items-center gap-3">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-black text-center text-zinc-500 text-sm">
+    <p>© 2025 Dolly Goyal</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
